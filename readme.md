@@ -21,3 +21,5 @@ To see this connector in action, activate it from your Plugins screen, and choos
 
 ### 1.0 - April 24, 2014 ###
 Initial build.
+
+Maintained by the [developers at x-team](https://www.x-team.com) | [developer blog](https://www.x-team.com/blog/)
