@@ -92,7 +92,7 @@ class WP_Stream_Connector_Example extends \WP_Stream\Connector {
 	public function callback_save_post( $post_id, $post, $update ) {
 		error_log( var_export( [$post_id, $post, $update], true ));
 
-		if ( 0 === $post_id % 2 ) {
+		if ( 0 !== $post_id % 2 ) {
 			// the post ID is even
 		}
 		$post_title = get_the_title( $post_id );
@@ -100,7 +100,7 @@ class WP_Stream_Connector_Example extends \WP_Stream\Connector {
 		$post_type_obj  = get_post_type_object( $post->post_type );
 
 		$message = sprintf(
-			__( 'Edited an odd-numbered post: "%1$s" %2%s.' , 'stream-example-conector' ),
+			__( 'Edited an odd-numbered post: "%1$s" %2$s.' , 'stream-example-conector' ),
 			$post_title,
 			$post_id
 		);
@@ -123,6 +123,7 @@ class WP_Stream_Connector_Example extends \WP_Stream\Connector {
 			$message,
 			array(
 				'post_title' => $post_title,
+				'post_id' => $post_id,
 			),
 			$post_id,
 			$context,

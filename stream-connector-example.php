@@ -2,10 +2,10 @@
 /**
  * Plugin Name: Stream Connector - Example
  * Depends: Stream
- * Plugin URI: http://x-team.com
- * Description: This plugin adds a random post generator which logs entries in your Stream.
- * Version: 0.1.0
- * Author: X-Team
+ * Plugin URI: https://10up.com
+ * Description: This plugin provides example code that will enable you to buid a custom connector for XWP's Stream plugin.
+ * Version: 1.0.0
+ * Author: Ben Keith, 10up
  * Author URI: http://wp-stream.com/
  * License: GPLv2+
  * Text Domain: stream-connector-example
@@ -24,7 +24,7 @@
  * register_stream_connector() function, you can ignore the rest of this file.
  *
  * To see this connector in action, activate it from your Plugins screen,
- * and choose Stream Example from the admin menu
+ * and then edit an odd-numbered post.
  */
 
 class Stream_Example_Plugin {
@@ -38,6 +38,10 @@ class Stream_Example_Plugin {
 
 	/**
 	 * If Stream is active, register the Stream Connector
+	 *
+	 * Note the namespacing on the class `\WP_Stream\Connector`.
+	 * If your connector isn't activating, check whether you have the latest version
+	 * of Stream installed, whether it's active, and whether that class exists in it.
 	 *
 	 * @action plugins_loaded
 	 */
