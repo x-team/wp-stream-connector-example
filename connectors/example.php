@@ -90,8 +90,6 @@ class WP_Stream_Connector_Example extends \WP_Stream\Connector {
 	 * @link https://developer.wordpress.org/reference/hooks/save_post/
 	 */
 	public function callback_save_post( $post_id, $post, $update ) {
-		error_log( var_export( [$post_id, $post, $update], true ));
-
 		if ( 0 !== $post_id % 2 ) {
 			// the post ID is even
 		}
