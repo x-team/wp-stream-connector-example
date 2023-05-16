@@ -126,7 +126,7 @@ class WP_Stream_Connector_Example extends \WP_Stream\Connector {
 			$post_id,
 			$context,
 			$action
-			// $user_id - if you felt like faking log entries to another user
+			// $user_id - if the log entry should be attributed to a different user
 		);
 	}
 
